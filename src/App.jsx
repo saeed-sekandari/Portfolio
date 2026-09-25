@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import profilePhoto from "./assets/profile-photo.png";
 
 const roles = [
   "a Computer Science student!",
@@ -51,6 +52,11 @@ function App() {
             Resume
           </a>
         </div>
+          <img
+          className="profile-photo"
+          src={profilePhoto}
+          alt="Professional portrait of Saeed Sekandari"
+        />
       </header>
 
       <main>

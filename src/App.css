@@ -17,9 +17,11 @@ body {
 /* Introduction */
 
 .intro {
+  position: relative;
   width: 100%;
+  min-height: 560px;
   margin: 0;
-  padding: 80px 28px 100px;
+  padding: 80px 380px 100px 28px;
   background-color: #0b1020;
   text-align: left;
 }
@@ -92,6 +94,22 @@ body {
   color: #0b1020;
 }
 
+/* Profile photo */
+
+.profile-photo {
+  position: absolute;
+  top: 100px;
+  right: 8%;
+  z-index: 2;
+  width: 300px;
+  height: 360px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
+}
+
 /* Main content */
 
 main {
@@ -150,7 +168,24 @@ footer {
   text-align: center;
 }
 
-/* Mobile layout */
+/* Medium screens */
+
+@media (max-width: 900px) {
+  .intro {
+    min-height: auto;
+    padding: 70px 28px 80px;
+  }
+
+  .profile-photo {
+    position: static;
+    display: block;
+    width: 240px;
+    height: 290px;
+    margin: 50px auto 0;
+  }
+}
+
+/* Mobile screens */
 
 @media (max-width: 600px) {
   .intro {
@@ -172,6 +207,12 @@ footer {
 
   .intro-buttons a {
     text-align: center;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 270px;
+    margin-top: 50px;
   }
 
   main {
