@@ -242,3 +242,55 @@ footer {
     padding: 32px 20px;
   }
 }
+/* About section */
+
+#about {
+  position: relative;
+  padding: 100px 0;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 165px;
+  bottom: 80px;
+  left: 0;
+  width: 2px;
+  background-color: var(--emerald);
+}
+
+#about h2 {
+  margin-bottom: 36px;
+  color: var(--brass);
+  text-align: left;
+}
+
+#about p {
+  max-width: 850px;
+  margin: 0 0 16px;
+  padding-left: 40px;
+  border-left: none;
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+#about p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  #about {
+    padding: 60px 0;
+  }
+
+  #about::before {
+    top: 125px;
+    bottom: 60px;
+  }
+
+  #about p {
+    padding-left: 24px;
+    font-size: 1rem;
+  }
+}
