@@ -1,15 +1,41 @@
+import { useEffect, useState } from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
+
+const roles = [
+  "a Computer Science student!",
+  "a full-stack developer!",
+  "a problem solver!",
+  "a soccer fan!",
+  "a chess player!",
+];
 
 function App() {
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    if (roleIndex === roles.length - 1) {
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setRoleIndex((currentIndex) => currentIndex + 1);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [roleIndex]);
+
   return (
     <div className="portfolio">
-      <header className="intro">
-        <p className="intro-label">Hello, I'm</p>
+      <Navbar />
 
-        <h1>Saeed Sekandari</h1>
+      <header className="intro" id="home">
+        <h1 className="intro-line intro-reveal">
+          Hi there, I’m Saeed 👋
+        </h1>
 
-        <p className="intro-title">
-          Computer Science Student & Software Developer
+        <p className="intro-title intro-line" key={roleIndex}>
+          And I’m {roles[roleIndex]}
         </p>
 
         <p className="intro-description">
@@ -20,6 +46,7 @@ function App() {
 
         <div className="intro-buttons">
           <a href="#projects">View Projects</a>
+
           <a href="/Saeed-Resume-Internships.pdf" target="_blank">
             Resume
           </a>

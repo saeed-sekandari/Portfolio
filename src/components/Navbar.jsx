@@ -1,19 +1,37 @@
 import "../styles/Navbar.css";
 
 function Navbar() {
-    return (
-        <nav className="navbar">
-        <div className="logo">
-            Saeed Sekandari<span></span>
-        </div>
+  return (
+    <nav className="site-nav">
+      <a className="site-brand" href="#home">
+        Saeed Sekandari
+      </a>
 
-        <ul className="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        </nav>
-           );
+      <div className="site-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div className="social-links">
+        <a
+          href="https://github.com/saeed-sekandari"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://linkedin.com/in/saeed-sekandari"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </nav>
+  );
 }
+
 export default Navbar;
