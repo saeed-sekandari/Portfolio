@@ -4,16 +4,30 @@ import Navbar from "./components/Navbar";
 import profilePhoto from "./assets/profile-photo.png";
 
 const roles = [
-  "a Computer Science student!",
+  "a CS student!",
   "a full-stack developer!",
-  "a problem solver!",
   "a soccer fan!",
   "a chess player!",
+  "a problem solver!",
 ];
 
 function App() {
   const [roleIndex, setRoleIndex] = useState(0);
 
+  // Restart the animation whenever the page is refreshed or loaded again
+  useEffect(() => {
+    const restartAnimation = () => {
+      setRoleIndex(0);
+    };
+
+    window.addEventListener("pageshow", restartAnimation);
+
+    return () => {
+      window.removeEventListener("pageshow", restartAnimation);
+    };
+  }, []);
+
+  // Show each sentence for three seconds
   useEffect(() => {
     if (roleIndex === roles.length - 1) {
       return;
@@ -52,7 +66,8 @@ function App() {
             Resume
           </a>
         </div>
-          <img
+
+        <img
           className="profile-photo"
           src={profilePhoto}
           alt="Professional portrait of Saeed Sekandari"
