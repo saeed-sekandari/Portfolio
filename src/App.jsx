@@ -12,7 +12,12 @@ import cinemaCartConfirmation from "./assets/cinemacart/cinemacart-booking-confi
 
 import portfolioDesktop from "./assets/portfolio/portfolio-desktop.png";
 
-import { FaDatabase } from "react-icons/fa6";
+import {
+  FaDatabase,
+  FaGears,
+  FaPeopleGroup,
+  FaShieldHalved,
+} from "react-icons/fa6";
 
 import {
   SiApachemaven,
@@ -499,10 +504,96 @@ function App() {
           </div>
         </section>
 
-        {/* Experience */}
+       {/* Experience section */}
         <section id="experience">
           <h2>Experience</h2>
-          <p>Experience information will be added here.</p>
+
+          <div className="experience-list">
+            {/* Current position */}
+            <article className="experience-card">
+              <div className="experience-icon">
+                <FaShieldHalved />
+              </div>
+
+              <div className="experience-main">
+                <p className="experience-date">June 2025–August 2026</p>
+
+                <h3>Security Officer</h3>
+
+                <p className="experience-company">
+                  Secure Net Alliance · Woodland Hills, CA
+                </p>
+
+                <p className="experience-description">
+                  Managed visitor access, maintained digital logs, monitored the
+                  property, and responded to security situations.
+                </p>
+
+                <div className="experience-skills">
+                  <span>Access Management</span>
+                  <span>Communication</span>
+                  <span>Responsibility</span>
+                </div>
+              </div>
+            </article>
+
+            {/* Previous position */}
+            <article className="experience-card">
+              <div className="experience-icon">
+                <FaPeopleGroup />
+              </div>
+
+              <div className="experience-main">
+                <p className="experience-date">January 2024–November 2024</p>
+
+                <h3>Client Service Monitor</h3>
+
+                <p className="experience-company">
+                  Hope of the Valley Rescue Mission · Reseda, CA
+                </p>
+
+                <p className="experience-description">
+                  Supported clients in a shelter environment, communicated with
+                  individuals in crisis, and worked with the team to maintain a safe
+                  environment.
+                </p>
+
+                <div className="experience-skills">
+                  <span>Client Support</span>
+                  <span>Conflict Resolution</span>
+                  <span>Teamwork</span>
+                </div>
+              </div>
+            </article>
+
+            {/* Earlier position */}
+            <article className="experience-card">
+              <div className="experience-icon">
+                <FaGears />
+              </div>
+
+              <div className="experience-main">
+                <p className="experience-date">March 2023–September 2023</p>
+
+                <h3>Machine Assembler</h3>
+
+                <p className="experience-company">
+                  ResMed · Chatsworth, CA
+                </p>
+
+                <p className="experience-description">
+                  Assembled medical devices while following technical procedures and
+                  maintaining quality standards.
+                </p>
+
+                <div className="experience-skills">
+                  <span>Attention to Detail</span>
+                  <span>Quality Control</span>
+                  <span>Consistency</span>
+                </div>
+              </div>
+            </article>
+          </div>
         </section>
 
         {/* Interests */}

@@ -944,3 +944,126 @@ footer {
     margin-top: 18px;
   }
 }
+/* Experience */
+
+#experience {
+  padding: 100px 0;
+}
+
+#experience h2 {
+  margin-bottom: 42px;
+  color: var(--brass);
+  text-align: left;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 26px 30px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background-color: var(--background);
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.experience-card:hover {
+  border-color: var(--brass);
+  background-color: var(--surface-light);
+  transform: translateY(-3px);
+}
+
+.experience-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(199, 163, 91, 0.6);
+  border-radius: 50%;
+  background-color: #18251f;
+  color: var(--brass);
+  font-size: 1.25rem;
+}
+
+.experience-main {
+  min-width: 0;
+}
+
+.experience-date {
+  margin: 0 0 8px;
+  color: var(--brass);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.experience-card h3 {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.experience-company {
+  margin: 0 0 14px;
+  color: var(--emerald-light);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.experience-description {
+  max-width: 850px;
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.6;
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.experience-skills span {
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--surface);
+  color: var(--muted-text);
+  font-size: 0.82rem;
+}
+
+/* Mobile experience layout */
+
+@media (max-width: 600px) {
+  #experience {
+    padding: 60px 0;
+  }
+
+  .experience-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+
+  .experience-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.2rem;
+  }
+}
