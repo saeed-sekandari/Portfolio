@@ -14,7 +14,7 @@ const roles = [
 function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
 
-  // Start the introduction animation from the beginning.
+  // Restart the introduction when the page loads.
   useEffect(() => {
     const restartAnimation = () => {
       setRoleIndex(0);
@@ -27,7 +27,7 @@ function Hero() {
     };
   }, []);
 
-  // Show each introduction role for three seconds.
+  // Change the introduction every three seconds.
   useEffect(() => {
     if (roleIndex === roles.length - 1) {
       return;
@@ -47,7 +47,7 @@ function Hero() {
         Hi there, I’m Saeed 👋
       </h1>
 
-      {/* The text changes every three seconds. */}
+      {/* Rotating introduction text */}
       <p className="intro-title intro-line" key={roleIndex}>
         And I’m {roles[roleIndex]}
       </p>
@@ -58,14 +58,13 @@ function Hero() {
         and building useful applications.
       </p>
 
-      {/* Main links for visitors */}
+      {/* Main page links */}
       <div className="intro-buttons">
         <a href="#projects">View Projects</a>
 
         <a
-          href="/Saeed-Resume-Internships.pdf"
-          target="_blank"
-          rel="noreferrer"
+          href="/Saeed-Resume.pdf"
+          download="Saeed-Sekandari-Resume.pdf"
         >
           Resume
         </a>
