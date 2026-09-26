@@ -10,6 +10,8 @@ import cinemaCartMovieDetails from "./assets/cinemacart/cinemacart-movie-details
 import cinemaCartShowtime from "./assets/cinemacart/cinemacart-showtime-selection.png";
 import cinemaCartConfirmation from "./assets/cinemacart/cinemacart-booking-confirmation.png";
 
+import portfolioDesktop from "./assets/portfolio/portfolio-desktop.png";
+
 import { FaDatabase } from "react-icons/fa6";
 
 import {
@@ -138,7 +140,7 @@ function App() {
         <div className="intro-buttons">
           <a href="#projects">View Projects</a>
 
-          <a href="/Saeed-Resume-Internships.pdf" target="_blank">
+          <a href="/Saeed-Resume.pdf" target="_blank">
             Resume
           </a>
         </div>
@@ -381,6 +383,50 @@ function App() {
 
               <a
                 href="https://github.com/saeed-sekandari/CinemaCart"
+                target="_blank"
+                rel="noreferrer"
+                className="project-button"
+              >
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+          
+          {/* Portfolio Website project */}
+          <article className="portfolio-project-card">
+            <div className="device-showcase">
+              <div className="desktop-monitor">
+                <div className="monitor-screen">
+                  <img
+                    src={portfolioDesktop}
+                    alt="Saeed Sekandari portfolio website"
+                  />
+                </div>
+              </div>
+
+              <div className="monitor-stand"></div>
+              <div className="monitor-base"></div>
+            </div>
+
+            <div className="project-content">
+              <h3>Portfolio Website</h3>
+
+              <div className="project-technologies">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>CSS</span>
+                <span>Vite</span>
+                <span>React Icons</span>
+              </div>
+
+              <p className="project-description">
+                I built this personal portfolio website to introduce myself, share my
+                background and technical skills, and showcase the software projects I
+                have worked on as I continue growing as a software engineer.
+              </p>
+
+              <a
+                href="https://github.com/saeed-sekandari/Portfolio"
                 target="_blank"
                 rel="noreferrer"
                 className="project-button"
