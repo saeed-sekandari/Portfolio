@@ -1,0 +1,64 @@
+/* Shared colors used throughout the portfolio. */
+
+:root {
+  --background: #0b0e0c;
+  --surface: #121815;
+  --surface-light: #18211c;
+  --text: #f6f1e6;
+  --muted-text: #a8ada5;
+  --emerald: #2f8f70;
+  --emerald-light: #4fb98f;
+  --brass: #c7a35b;
+  --border: #29342e;
+}
+
+/* Make sizing easier to control. */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base page styling. */
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Shared layout for the main content. */
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0 28px;
+  background-color: var(--surface);
+}
+
+section {
+  width: 100%;
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+}
+
+section h2 {
+  margin: 0 0 28px;
+  color: var(--text);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+section p {
+  color: var(--muted-text);
+  line-height: 1.7;
+}

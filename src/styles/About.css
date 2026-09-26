@@ -1,0 +1,55 @@
+/* About section */
+
+#about {
+  position: relative;
+  padding: 80px 0;
+}
+
+/* Decorative line beside the About content. */
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 145px;
+  bottom: 60px;
+  left: 0;
+  width: 2px;
+  background-color: var(--emerald);
+}
+
+#about h2 {
+  margin: 0 0 28px;
+  color: var(--brass);
+  text-align: left;
+}
+
+#about p {
+  max-width: 850px;
+  margin: 0 0 16px;
+  padding-left: 40px;
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+#about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reduce spacing on smaller screens. */
+
+@media (max-width: 600px) {
+  #about {
+    padding: 60px 0;
+  }
+
+  #about::before {
+    top: 125px;
+    bottom: 45px;
+  }
+
+  #about p {
+    padding-left: 24px;
+    font-size: 1rem;
+  }
+}

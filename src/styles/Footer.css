@@ -1,0 +1,22 @@
+/* Footer */
+
+footer {
+  width: 100%;
+  padding: 40px 28px;
+  border-top: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--muted-text);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Slightly reduce the footer spacing on phones. */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 32px 20px;
+  }
+}

@@ -1,0 +1,159 @@
+/* Education timeline */
+
+#education {
+  padding: 60px 0;
+}
+
+#education h2 {
+  margin: 0 0 28px;
+  color: var(--brass);
+  text-align: left;
+}
+
+.education-timeline {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* Vertical line connecting the education entries. */
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 178px;
+  width: 1px;
+  background-color: var(--border);
+}
+
+.education-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 76px 1fr;
+  gap: 0;
+  margin-bottom: 54px;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-date {
+  padding-top: 5px;
+  color: var(--brass);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.education-date span {
+  display: block;
+  color: var(--muted-text);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.education-marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: 0 auto;
+  border: 1px solid var(--brass);
+  border-radius: 50%;
+  background-color: var(--background);
+  color: var(--brass);
+  font-size: 1rem;
+}
+
+.education-details {
+  padding-left: 24px;
+}
+
+.education-school {
+  margin: 0 0 8px;
+  color: var(--emerald-light);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.education-details h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+.education-minor {
+  margin: 0;
+  color: var(--muted-text);
+}
+
+.education-details h4 {
+  margin: 24px 0 12px;
+  color: var(--brass);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.coursework-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.coursework-list span {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--surface-light);
+  color: var(--muted-text);
+  font-size: 0.85rem;
+}
+
+/* Stack the timeline on small screens. */
+
+@media (max-width: 700px) {
+  #education {
+    padding: 45px 0;
+  }
+
+  .education-timeline::before {
+    left: 18px;
+  }
+
+  .education-item {
+    grid-template-columns: 38px 1fr;
+    gap: 16px;
+  }
+
+  .education-date {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0;
+    text-align: left;
+  }
+
+  .education-marker {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  .education-details {
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 0;
+  }
+
+  .education-school {
+    margin-top: 18px;
+  }
+}
