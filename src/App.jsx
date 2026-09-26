@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+
 import profilePhoto from "./assets/profile-photo.png";
+
+import cinemaCartHomepage from "./assets/cinemacart/cinemacart-homepage.png";
+import cinemaCartNowShowing from "./assets/cinemacart/cinemacart-now-showing.png";
+import cinemaCartMovieDetails from "./assets/cinemacart/cinemacart-movie-details.png";
+import cinemaCartShowtime from "./assets/cinemacart/cinemacart-showtime-selection.png";
+import cinemaCartConfirmation from "./assets/cinemacart/cinemacart-booking-confirmation.png";
 
 import { FaDatabase } from "react-icons/fa6";
 
@@ -24,6 +31,7 @@ import {
 
 import { VscVscode } from "react-icons/vsc";
 
+// These phrases appear in the introduction.
 const roles = [
   "a CS student!",
   "a full-stack developer!",
@@ -32,9 +40,40 @@ const roles = [
   "a problem solver!",
 ];
 
+// These images are used in the CinemaCart gallery.
+const cinemaCartImages = [
+  {
+    src: cinemaCartHomepage,
+    alt: "CinemaCart homepage",
+    label: "Homepage",
+  },
+  {
+    src: cinemaCartNowShowing,
+    alt: "CinemaCart Now Showing page",
+    label: "Now Showing",
+  },
+  {
+    src: cinemaCartMovieDetails,
+    alt: "CinemaCart movie details page",
+    label: "Movie Details",
+  },
+  {
+    src: cinemaCartShowtime,
+    alt: "CinemaCart showtime selection page",
+    label: "Showtime Selection",
+  },
+  {
+    src: cinemaCartConfirmation,
+    alt: "CinemaCart booking confirmation page",
+    label: "Booking Confirmation",
+  },
+];
+
 function App() {
   const [roleIndex, setRoleIndex] = useState(0);
+  const [selectedProjectImage, setSelectedProjectImage] = useState(0);
 
+  // Restart the introduction when the page loads again.
   useEffect(() => {
     const restartAnimation = () => {
       setRoleIndex(0);
@@ -47,6 +86,7 @@ function App() {
     };
   }, []);
 
+  // Change the introduction phrase every three seconds.
   useEffect(() => {
     if (roleIndex === roles.length - 1) {
       return;
@@ -59,10 +99,27 @@ function App() {
     return () => clearTimeout(timer);
   }, [roleIndex]);
 
+  // Show the previous CinemaCart image.
+  const showPreviousImage = () => {
+    setSelectedProjectImage((currentIndex) =>
+      currentIndex === 0
+        ? cinemaCartImages.length - 1
+        : currentIndex - 1
+    );
+  };
+
+  // Show the next CinemaCart image.
+  const showNextImage = () => {
+    setSelectedProjectImage(
+      (currentIndex) => (currentIndex + 1) % cinemaCartImages.length
+    );
+  };
+
   return (
     <div className="portfolio">
       <Navbar />
 
+      {/* Introduction */}
       <header className="intro" id="home">
         <h1 className="intro-line intro-reveal">
           Hi there, I’m Saeed 👋
@@ -94,6 +151,7 @@ function App() {
       </header>
 
       <main>
+        {/* About section */}
         <section id="about">
           <h2>About Me</h2>
 
@@ -124,6 +182,7 @@ function App() {
           </p>
         </section>
 
+        {/* Technical Skills */}
         <section id="skills">
           <h2>Technical Skills</h2>
 
@@ -234,32 +293,120 @@ function App() {
           </div>
         </section>
 
+        {/* Projects */}
         <section id="projects">
           <h2>Projects</h2>
 
-          <article>
-            <h3>CinemaCart</h3>
-            <p>Full-Stack Movie Ticket Booking Application</p>
-          </article>
+          <article className="project-card">
+            {/* CinemaCart screenshot gallery */}
+            <div className="project-gallery">
+              <div className="main-project-image">
+                <button
+                  className="gallery-arrow gallery-arrow-left"
+                  onClick={showPreviousImage}
+                  aria-label="Show previous screenshot"
+                >
+                  ←
+                </button>
 
-          <article>
-            <h3>Project Placeholder</h3>
-            <p>Another software engineering project will be added here.</p>
+                <img
+                  src={cinemaCartImages[selectedProjectImage].src}
+                  alt={cinemaCartImages[selectedProjectImage].alt}
+                />
+
+                <button
+                  className="gallery-arrow gallery-arrow-right"
+                  onClick={showNextImage}
+                  aria-label="Show next screenshot"
+                >
+                  →
+                </button>
+              </div>
+
+              <div className="project-thumbnails">
+                {cinemaCartImages.map((image, index) => (
+                  <button
+                    key={image.src}
+                    className={`project-thumbnail ${
+                      selectedProjectImage === index
+                        ? "active-thumbnail"
+                        : ""
+                    }`}
+                    onClick={() => setSelectedProjectImage(index)}
+                    aria-label={`Show ${image.label} screenshot`}
+                  >
+                    <img src={image.src} alt={image.alt} />
+                  </button>
+                ))}
+              </div>
+
+              <p className="image-label">
+                {cinemaCartImages[selectedProjectImage].label}
+              </p>
+            </div>
+
+            {/* CinemaCart information */}
+            <div className="project-content">
+              <h3>CinemaCart</h3>
+
+              <div className="project-technologies">
+                <span>Java</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Firebase</span>
+                <span>Maven</span>
+              </div>
+
+              <h4>Overview</h4>
+
+              <p className="project-description">
+                CinemaCart is a full-stack movie ticket booking application
+                developed by a four-person team for COMP 380 at CSUN. The
+                application guides users through the complete movie-booking
+                process, from browsing and searching for movies to viewing
+                details and trailers, selecting showtimes and seats, managing a
+                shopping cart, and confirming ticket bookings.
+              </p>
+
+              <h4>My Contribution</h4>
+
+              <p className="project-contribution">
+                I primarily contributed to the backend development. I
+                implemented the movie data structure and search functionality,
+                including filtering by title and genre. I also developed the
+                shopping cart and seat-selection logic, added input validation,
+                and connected backend features with the frontend.
+              </p>
+
+              <a
+                href="https://github.com/saeed-sekandari/CinemaCart"
+                target="_blank"
+                rel="noreferrer"
+                className="project-button"
+              >
+                View on GitHub →
+              </a>
+            </div>
           </article>
         </section>
 
+        {/* Education */}
         <section id="education">
           <h2>Education</h2>
           <p>Education information will be added here.</p>
         </section>
 
+        {/* Experience */}
         <section id="experience">
           <h2>Experience</h2>
           <p>Experience information will be added here.</p>
         </section>
 
+        {/* Interests */}
         <section id="interests">
           <h2>Interests</h2>
+
           <p>
             Watching soccer, playing chess, watching TV shows, building things,
             and working out.
