@@ -802,8 +802,9 @@ footer {
 
 .education-timeline {
   position: relative;
-  max-width: 1050px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .education-timeline::before {
@@ -1065,5 +1066,54 @@ footer {
 
   .experience-card h3 {
     font-size: 1.2rem;
+  }
+}
+
+/* Reduce the vertical space between sections */
+
+#about,
+#skills,
+#projects,
+#education,
+#experience,
+#interests {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Keep section headings closer to their content */
+
+#about h2,
+#skills h2,
+#projects h2,
+#education h2,
+#experience h2,
+#interests h2 {
+  margin-bottom: 28px;
+}
+
+/* Keep the About vertical line aligned */
+
+#about::before {
+  top: 120px;
+  bottom: 60px;
+}
+
+/* Slightly smaller spacing on mobile */
+
+@media (max-width: 600px) {
+  #about,
+  #skills,
+  #projects,
+  #education,
+  #experience,
+  #interests {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  #about::before {
+    top: 105px;
+    bottom: 45px;
   }
 }
