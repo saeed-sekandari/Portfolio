@@ -64,7 +64,8 @@ function Hero() {
 
         <a
           href="/Saeed-Resume.pdf"
-          download="Saeed-Sekandari-Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
         >
           Resume
         </a>
