@@ -9,7 +9,7 @@ function Education() {
         {/* Current university */}
         <article className="education-item">
           <div className="education-date">
-            2023–Present
+            2025–Present
             <span>Expected Dec 2027</span>
           </div>
 
@@ -39,7 +39,7 @@ function Education() {
         {/* Previous college */}
         <article className="education-item">
           <div className="education-date">
-            2023–2024
+            2023–2025
             <span>Completed</span>
           </div>
 
