@@ -23,7 +23,7 @@
 
 .logo {
   color: var(--text);
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -64,6 +64,17 @@
   gap: 16px;
 }
 
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* Hidden on desktop */
 
 .menu-button {
@@ -87,7 +98,7 @@
   }
 
   .logo {
-    font-size: 1.35rem;
+    font-size: 1.9rem;
   }
 
   .menu-button {
@@ -145,13 +156,12 @@
     border-top: 1px solid var(--border);
   }
 
-  .social-links a {
-    font-size: 1rem;
+  .social-link {
+    gap: 8px;
   }
-}
 
-@media (max-width: 700px) {
-  .logo {
-    font-size: 1.9rem;
+  .social-link svg {
+    width: 20px;
+    height: 20px;
   }
 }

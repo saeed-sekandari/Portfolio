@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -83,19 +85,25 @@ function Navbar() {
         {/* Social links */}
         <div className="social-links">
           <a
+            className="social-link"
             href="https://github.com/saeed-sekandari"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
           >
-            GitHub
+            <FaGithub />
+            <span>GitHub</span>
           </a>
 
           <a
+            className="social-link"
             href="https://www.linkedin.com/in/saeed-sekandari"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
           >
-            LinkedIn
+            <FaLinkedin />
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>
