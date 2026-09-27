@@ -177,3 +177,9 @@
     margin: 44px auto 0;
   }
 }
+
+@media (max-width: 700px) {
+  .intro-line {
+    font-size: clamp(1.7rem, 7.5vw, 2.05rem);
+  }
+}

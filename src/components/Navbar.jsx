@@ -13,15 +13,15 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-top">
         <a href="#home" className="logo" onClick={closeMenu}>
-          Saeed Sekandari<span></span>
+          Saeed Sekandari
         </a>
 
-        {/* This button appears on mobile screens. */}
+        {/* Mobile menu button */}
         <button
           className="menu-button"
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Open navigation menu"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
         >
           <span></span>
@@ -80,7 +80,7 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Social links stay inside the mobile menu. */}
+        {/* Social links */}
         <div className="social-links">
           <a
             href="https://github.com/saeed-sekandari"
