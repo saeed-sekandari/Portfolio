@@ -62,3 +62,22 @@ section p {
   color: var(--muted-text);
   line-height: 1.7;
 }
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 45px 0;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+}

@@ -320,3 +320,17 @@
     padding: 18px 14px 0;
   }
 }
+@media (max-width: 600px) {
+  #projects .project-content h3 {
+    margin: 0 0 8px !important;
+  }
+
+  #projects .project-technologies {
+    margin: 0 !important;
+    gap: 8px;
+  }
+
+  #projects .project-description {
+    margin: 8px 0 0 !important;
+  }
+}

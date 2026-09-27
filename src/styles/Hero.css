@@ -134,3 +134,46 @@
     height: 300px;
   }
 }
+@media (max-width: 600px) {
+  .intro {
+    width: 100%;
+    min-height: auto;
+    padding: 55px 20px 70px;
+    overflow: hidden;
+  }
+
+  .intro-line {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    overflow-wrap: break-word;
+  }
+
+  .intro-title {
+    margin-top: 20px;
+  }
+
+  .intro-description {
+    margin-top: 24px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .intro-buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .intro-buttons a {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 270px;
+    margin: 44px auto 0;
+  }
+}
