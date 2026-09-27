@@ -1,34 +1,30 @@
 import "../styles/Interests.css";
 
-// These interests show a little more about me.
 const interests = [
   {
     icon: "⚽",
     title: "Soccer",
-    description: "I enjoy watching soccer and following different teams.",
+    detail: "Real Madrid fan",
   },
   {
     icon: "♟",
     title: "Chess",
-    description:
-      "I like chess because it helps me think ahead and solve problems.",
+    detail: "Chess.com · 1100 rating",
   },
   {
     icon: "💻",
     title: "Building Projects",
-    description:
-      "I enjoy creating applications and learning new technologies.",
+    detail: "Learning by creating",
   },
   {
     icon: "🏋️",
     title: "Fitness",
-    description:
-      "Working out helps me stay healthy, focused, and disciplined.",
+    detail: "Gym · 5 days a week",
   },
   {
     icon: "📺",
     title: "TV Shows",
-    description: "I enjoy watching TV shows during my free time.",
+    detail: "Breaking Bad · Game of Thrones",
   },
 ];
 
@@ -37,16 +33,15 @@ function Interests() {
     <section id="interests">
       <h2>Interests</h2>
 
-      {/* Display each interest as a small card. */}
+      {/* Show each interest as a simple card. */}
       <div className="interests-grid">
         {interests.map((interest) => (
           <article className="interest-card" key={interest.title}>
-            {/* Each card has a simple visual icon. */}
             <div className="interest-icon">{interest.icon}</div>
 
             <h3>{interest.title}</h3>
 
-            <p>{interest.description}</p>
+            <p>{interest.detail}</p>
           </article>
         ))}
       </div>

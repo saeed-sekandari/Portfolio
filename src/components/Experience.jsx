@@ -13,7 +13,7 @@ const experiences = [
     title: "Security Officer",
     company: "Secure Net Alliance",
     location: "Woodland Hills, CA",
-    date: "June 2025–Present",
+    date: "June 2025 – August 2026",
     description:
       "Managed visitor access, maintained digital logs, monitored property, and responded to security situations.",
     skills: ["Access Management", "Communication", "Responsibility"],
@@ -23,7 +23,7 @@ const experiences = [
     title: "Client Service Monitor",
     company: "Hope of the Valley Rescue Mission",
     location: "Reseda, CA",
-    date: "January 2024–November 2024",
+    date: "January 2024 – November 2024",
     description:
       "Supported clients in a shelter environment, communicated with individuals in crisis, and worked with a team to maintain a safe environment.",
     skills: ["Client Support", "Conflict Resolution", "Teamwork"],
@@ -33,7 +33,7 @@ const experiences = [
     title: "Machine Assembler",
     company: "ResMed",
     location: "Chatsworth, CA",
-    date: "March 2023–September 2023",
+    date: "March 2023 – September 2023",
     description:
       "Assembled medical devices while following technical procedures and maintaining quality standards.",
     skills: ["Attention to Detail", "Quality Control", "Consistency"],
